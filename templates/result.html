@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Result - Steganography App</title>
+</head>
+<body>
+    <header>
+        <h1>Operation Result</h1>
+    </header>
+    <main>
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+
+        {% if download_url %}
+            <a href="{{ download_url }}" class="button" download>Download File</a>
+        {% endif %}
+
+        {% if message %}
+            <p>Decrypted Message: <strong>{{ message }}</strong></p>
+        {% endif %}
+    </main>
+    <footer>
+        <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+Flask
+Pillow
+wave
+numpy
+opencv-python
+stegano
+pydub

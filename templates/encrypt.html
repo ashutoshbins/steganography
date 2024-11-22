@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Encrypt - Steganography App</title>
+</head>
+<body>
+    <header>
+        <h1>Encrypt Your Message</h1>
+    </header>
+    <main>
+        <form method="POST" enctype="multipart/form-data" class="form-container">
+            <label for="file">Choose a file (Image/Audio):</label>
+            <input type="file" name="file" id="file" required>
+
+            <label for="text">Enter your message:</label>
+            <textarea name="text" id="text" rows="4" required></textarea>
+
+            <label for="type">Select type:</label>
+            <select name="type" id="type" required>
+                <option value="image">Image</option>
+                <option value="audio">Audio</option>
+            </select>
+
+            <button type="submit" class="button">Encrypt</button>
+        </form>
+    </main>
+    <footer>
+        <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+    </footer>
+</body>
+</html>

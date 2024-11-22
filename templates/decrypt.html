@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Decrypt - Steganography App</title>
+</head>
+<body>
+    <header>
+        <h1>Decrypt Your Message</h1>
+    </header>
+    <main>
+        <form method="POST" enctype="multipart/form-data" class="form-container">
+            <label for="file">Upload a file (Image/Audio):</label>
+            <input type="file" name="file" id="file" required>
+
+            <label for="type">Select type:</label>
+            <select name="type" id="type" required>
+                <option value="image">Image</option>
+                <option value="audio">Audio</option>
+            </select>
+
+            <button type="submit" class="button">Decrypt</button>
+        </form>
+    </main>
+    <footer>
+        <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+    </footer>
+</body>
+</html>

@@ -2,9 +2,6 @@ from flask import Flask, request, render_template, send_file, url_for
 import os
 from encode_image import encode_image
 from decode_image import decode_image
-from encode_audio import encode_audio
-from decode_audio import decode_audio
-
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './static/uploads'
 

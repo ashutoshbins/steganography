@@ -1,12 +1,8 @@
 from flask import Flask, request, render_template, send_file, url_for
 import os
-<<<<<<< HEAD
 from PIL import Image
-
-=======
 from encode_image import encode_image
 from decode_image import decode_image
->>>>>>> 3431294c6b713fb39dd5547480e3c9c75324ddc8
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './static/uploads'
 

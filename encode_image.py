@@ -1,4 +1,4 @@
-from PIL import Image
+
 
 def encode_image(input_image_path, text, output_image_path):
     # Open the image
